@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class FiguraMenu{
+class FigurasMenu{
 
     public static void main(String[] args){
         
@@ -9,9 +9,11 @@ class FiguraMenu{
         int opcion;
         int altura, base, diagonal1, diagonal2, lado, ladorombo;
         double resultado, apotema, perimetro1;
+        char letra;
 
 
         //la creacion del menu
+        do{
 
         System.out.println("Bienvenido al programa de calculo de areas y perimetros");
         System.out.println("Elija una de las siguientes opciones:");
@@ -21,8 +23,6 @@ class FiguraMenu{
         System.out.println("4.- Calcular area y perimetro area de un rectangulo");
         System.out.println("5.- Calcular area y perimetro area de un rombo");
         System.out.println("6.- Calcular area y perimetro area de un hexagono");
-        System.out.println("S.- Salir");
-        System.out.println("s.- Salir");
 
 
         opcion = entrada.nextInt();
@@ -91,12 +91,20 @@ class FiguraMenu{
                 System.out.println("El area es de: "+resultado);
                 System.out.println("El perimetro es de: "+perimetro1);
                 break;
-            
-               
-
-
             default:
                 System.out.println("Gracias por venir xd");
         }
+        System.out.println("Si quieres terminar, favor de presionar 's'");
+        letra = entrada.next().charAt(0);
+        
+
+
+            
+        }while(letra!='s');
+        
+
+
+           
+        
     }
 }
